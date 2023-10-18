@@ -255,15 +255,22 @@ else:
         tictactoe.play()
         if tictactoe.winner == "p":
             print("You win! The computer has lost 10 hp")
+            time.sleep(1)
             ehealth -= 10
+            if phealth < 90:
+                phealth += 10
+            else:
+                phealth = 100
+                print("You are fully healed!")
             time.sleep(1)
         elif tictactoe.winner == "e":
-            print("Computer wins! Computer has gained 10 hp")
-            phealth -= 10
+            print("Computer wins! You are very hurt")
+            phealth -= 34
             time.sleep(1)
         elif tictactoe.winner == "t":
-            print("It's a tie. Computer loses 2 hp")
+            print("It's a tie. Computer loses 2 hp. You are hurt in the process:")
             ehealth -= 2
+            phealth -= 10
             time.sleep(1)
         tictactoe.reset(ehealth)
     if ehealth <= 0:
