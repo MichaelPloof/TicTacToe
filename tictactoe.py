@@ -8,8 +8,7 @@ phealth = 100
 class Tictactoe:
     grid = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]]
     grid_simul = copy.deepcopy(grid)
-    valid_moves = ["X", "O"]
-    moves_temp = random.sample(valid_moves, len(valid_moves))
+    moves_temp = random.sample(["X", "O"], 2)
     computer = moves_temp[0]
     player = moves_temp[1]
     winner = "t" # t = tie, p = player, e = enemy
@@ -167,8 +166,7 @@ class Tictactoe:
     def reset(self, health):
         self.grid = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]]
         self.grid_simul = copy.deepcopy(self.grid)
-        self.valid_moves = ["X", "O"]
-        self.moves_temp = random.sample(self.valid_moves, len(self.valid_moves))
+        self.moves_temp = random.sample(["X", "O"], 2)
         self.computer = self.moves_temp[0]
         self.player = self.moves_temp[1]
         self.winner = "t"
@@ -274,4 +272,4 @@ else:
     else:
         print("You have lost.")
         time.sleep(1)
-print("\n\nAs you may probably tell, the game of tic tac tow is solved, meaning computers can always find the optimal moves necesary to beat or tie the game. As a result, the optimal games always result in a tie.\n\nThank you for playing!")
+print("\n\nAs you may probably tell, the game of tic tac toe is solved, meaning computers can always find the optimal moves necesary to beat or tie the game. As a result, the optimal games always result in a tie.\n\nThank you for playing!")
