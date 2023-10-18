@@ -229,7 +229,7 @@ class Tictactoe:
 tictactoe = Tictactoe(ehealth)
 print("Welcome, stranger, to the marvelous game of Tic Tac Toe.\n")
 time.sleep(2)
-print("This program uses artifical intellegence (specifically, the minimax algorithm) to come up with the best possible move. It is unbeatable.\n")
+print("This program uses artifical intellegence (specifically, the MiniMax algorithm) to come up with the best possible move. It is unbeatable.\n")
 time.sleep(3)
 print("Would you like to try the ai or would you like to begin the game?")
 time.sleep(1.5)
@@ -239,11 +239,11 @@ if pchoice.lower() == "y":
     tictactoe.anger = 100
     tictactoe.play()
     if tictactoe.winner == "p":
-        print("You won? Please let me know of this, this is supposed to be unbeatable")
+        print("You won? Please let me know of this, this is supposed to be unbeatable...")
     elif tictactoe.winner == "e":
         print("You have lost.")
     elif tictactoe.winner == "t":
-        print("As I expect to happen, you have tied. In fact, if you pair minimax with itself, it will tie 100% of the time!")
+        print("As I expect to happen, you have tied. In fact, if you pair MiniMax with itself, it will tie 100% of the time!")
 else:
     print("\nYou have chosen to play the main game: Very well, good luck!\n")
     time.sleep(1)
